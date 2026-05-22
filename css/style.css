@@ -2,13 +2,27 @@
    Marketing Consultant — B2B Growth & Marketing Ops
    ============================================= */
 
-/* ---- Shared morphing dark gradient animation ---- */
+/* ---- Hero gradient animation ---- */
 @keyframes morphGradient {
   0%   { background-position: 0% 50%; }
   25%  { background-position: 50% 0%; }
   50%  { background-position: 100% 50%; }
   75%  { background-position: 50% 100%; }
   100% { background-position: 0% 50%; }
+}
+
+/* ---- Floating ring light animations ---- */
+@keyframes ringFloat1 {
+  0%   { transform: translate(0, 0) scale(1);      opacity: .55; }
+  35%  { transform: translate(-6%, 14%) scale(1.12); opacity: .8; }
+  65%  { transform: translate(10%, -8%) scale(.92); opacity: .5; }
+  100% { transform: translate(0, 0) scale(1);      opacity: .55; }
+}
+@keyframes ringFloat2 {
+  0%   { transform: translate(0, 0) scale(1);       opacity: .4; }
+  40%  { transform: translate(10%, -16%) scale(1.2); opacity: .65; }
+  75%  { transform: translate(-8%, 10%) scale(.87);  opacity: .42; }
+  100% { transform: translate(0, 0) scale(1);        opacity: .4; }
 }
 
 /* Reusable mixin values — applied per-selector below */
@@ -173,7 +187,7 @@ li { margin-bottom: .4rem; }
 }
 
 .nav-links a {
-  color: rgba(255,255,255,.75);
+  color: var(--white);
   font-size: .9rem;
   font-weight: 500;
   padding: .45rem .85rem;
@@ -241,9 +255,9 @@ li { margin-bottom: .4rem; }
    HERO
    ============================================= */
 .hero {
-  background: linear-gradient(-45deg, #091828, #0d2d50, #0f4060, #0b4a38, #093320, #0d2d50, #091828);
+  background: linear-gradient(-45deg, #0d2d55, #1c5490, #2a7fc0, #1a7080, #0f4570, #1c5490, #0d2d55);
   background-size: 400% 400%;
-  animation: morphGradient 22s ease -4s infinite;
+  animation: morphGradient 20s ease -4s infinite;
   padding: 140px 0 110px;
   position: relative;
   overflow: hidden;
@@ -252,18 +266,28 @@ li { margin-bottom: .4rem; }
 .hero::before {
   content: '';
   position: absolute;
-  top: -160px; right: -120px;
-  width: 780px; height: 780px;
-  background: radial-gradient(circle, rgba(45,142,212,.22) 0%, rgba(26,111,168,.08) 45%, transparent 70%);
+  top: -15%; right: -10%;
+  width: 75%; height: 140%;
+  background: radial-gradient(ellipse at center,
+    transparent 24%,
+    rgba(100,195,255,.28) 36%,
+    rgba(55,155,220,.13) 50%,
+    transparent 62%);
+  animation: ringFloat1 16s ease-in-out infinite;
   pointer-events: none;
 }
 
 .hero::after {
   content: '';
   position: absolute;
-  bottom: -80px; left: -100px;
-  width: 560px; height: 560px;
-  background: radial-gradient(circle, rgba(26,111,168,.12) 0%, transparent 65%);
+  bottom: -20%; left: -10%;
+  width: 60%; height: 115%;
+  background: radial-gradient(ellipse at center,
+    transparent 28%,
+    rgba(40,200,200,.22) 40%,
+    rgba(30,160,175,.1) 55%,
+    transparent 67%);
+  animation: ringFloat2 22s ease-in-out -7s infinite;
   pointer-events: none;
 }
 
@@ -535,9 +559,9 @@ li { margin-bottom: .4rem; }
    ABOUT PAGE
    ============================================= */
 .page-hero {
-  background: linear-gradient(-45deg, #091828, #0d2d50, #0f4060, #0b4a38, #093320, #0d2d50, #091828);
+  background: linear-gradient(-45deg, #0d2d55, #1c5490, #2a7fc0, #1a7080, #0f4570, #1c5490, #0d2d55);
   background-size: 400% 400%;
-  animation: morphGradient 22s ease -4s infinite;
+  animation: morphGradient 20s ease -4s infinite;
   padding: 120px 0 80px;
   position: relative;
   overflow: hidden;
@@ -545,17 +569,27 @@ li { margin-bottom: .4rem; }
 .page-hero::before {
   content: '';
   position: absolute;
-  top: -120px; right: -80px;
-  width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(45,142,212,.2) 0%, rgba(26,111,168,.07) 45%, transparent 70%);
+  top: -20%; right: -8%;
+  width: 70%; height: 160%;
+  background: radial-gradient(ellipse at center,
+    transparent 24%,
+    rgba(100,195,255,.26) 36%,
+    rgba(55,155,220,.12) 50%,
+    transparent 62%);
+  animation: ringFloat1 16s ease-in-out infinite;
   pointer-events: none;
 }
 .page-hero::after {
   content: '';
   position: absolute;
-  bottom: -60px; left: -60px;
-  width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(26,111,168,.1) 0%, transparent 65%);
+  bottom: -20%; left: -8%;
+  width: 55%; height: 130%;
+  background: radial-gradient(ellipse at center,
+    transparent 28%,
+    rgba(40,200,200,.2) 40%,
+    rgba(30,160,175,.09) 55%,
+    transparent 67%);
+  animation: ringFloat2 22s ease-in-out -7s infinite;
   pointer-events: none;
 }
 .page-hero .container { position: relative; z-index: 1; }
@@ -790,9 +824,9 @@ li { margin-bottom: .4rem; }
    BLOG POST
    ============================================= */
 .post-hero {
-  background: linear-gradient(-45deg, #091828, #0d2d50, #0f4060, #0b4a38, #093320, #0d2d50, #091828);
+  background: linear-gradient(-45deg, #0d2d55, #1c5490, #2a7fc0, #1a7080, #0f4570, #1c5490, #0d2d55);
   background-size: 400% 400%;
-  animation: morphGradient 22s ease -4s infinite;
+  animation: morphGradient 20s ease -4s infinite;
   padding: 120px 0 64px;
   position: relative;
   overflow: hidden;
@@ -800,9 +834,27 @@ li { margin-bottom: .4rem; }
 .post-hero::before {
   content: '';
   position: absolute;
-  top: -100px; right: -80px;
-  width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(45,142,212,.18) 0%, transparent 65%);
+  top: -20%; right: -8%;
+  width: 70%; height: 180%;
+  background: radial-gradient(ellipse at center,
+    transparent 24%,
+    rgba(100,195,255,.26) 36%,
+    rgba(55,155,220,.12) 50%,
+    transparent 62%);
+  animation: ringFloat1 16s ease-in-out infinite;
+  pointer-events: none;
+}
+.post-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -20%; left: -8%;
+  width: 55%; height: 150%;
+  background: radial-gradient(ellipse at center,
+    transparent 28%,
+    rgba(40,200,200,.2) 40%,
+    rgba(30,160,175,.09) 55%,
+    transparent 67%);
+  animation: ringFloat2 22s ease-in-out -7s infinite;
   pointer-events: none;
 }
 .post-hero .container { position: relative; z-index: 1; }

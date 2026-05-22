@@ -2,6 +2,31 @@
    Marketing Consultant — B2B Growth & Marketing Ops
    ============================================= */
 
+/* ---- Shared morphing dark gradient animation ---- */
+@keyframes morphGradient {
+  0%   { background-position: 0% 50%; }
+  25%  { background-position: 50% 0%; }
+  50%  { background-position: 100% 50%; }
+  75%  { background-position: 50% 100%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Reusable mixin values — applied per-selector below */
+.animated-dark {
+  background: linear-gradient(
+    -45deg,
+    #091828,
+    #0d2d50,
+    #0f4060,
+    #0b4a38,
+    #093320,
+    #0d2d50,
+    #091828
+  );
+  background-size: 400% 400%;
+  animation: morphGradient 22s ease infinite;
+}
+
 :root {
   --navy-dark: #0A1628;
   --navy:      #14243E;
@@ -113,7 +138,9 @@ li { margin-bottom: .4rem; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: var(--navy-dark);
+  background: linear-gradient(-45deg, #091828, #0d2d50, #0f4060, #0b4a38, #093320, #0d2d50, #091828);
+  background-size: 400% 400%;
+  animation: morphGradient 22s ease 0s infinite;
   border-bottom: 1px solid rgba(255,255,255,.06);
   height: 68px;
   display: flex;
@@ -188,7 +215,9 @@ li { margin-bottom: .4rem; }
   display: none;
   position: fixed;
   top: 68px; left: 0; right: 0;
-  background: var(--navy-dark);
+  background: linear-gradient(-45deg, #091828, #0d2d50, #0f4060, #0b4a38, #093320, #0d2d50, #091828);
+  background-size: 400% 400%;
+  animation: morphGradient 22s ease 0s infinite;
   border-bottom: 1px solid rgba(255,255,255,.08);
   padding: 16px 24px 24px;
   z-index: 999;
@@ -216,7 +245,9 @@ li { margin-bottom: .4rem; }
    HERO
    ============================================= */
 .hero {
-  background: linear-gradient(140deg, #1e4976 0%, #142f52 35%, #0e2040 65%, #091828 100%);
+  background: linear-gradient(-45deg, #091828, #0d2d50, #0f4060, #0b4a38, #093320, #0d2d50, #091828);
+  background-size: 400% 400%;
+  animation: morphGradient 22s ease -4s infinite;
   padding: 140px 0 110px;
   position: relative;
   overflow: hidden;
@@ -297,7 +328,9 @@ li { margin-bottom: .4rem; }
 }
 
 .familiar-bridge {
-  background: var(--navy-dark);
+  background: linear-gradient(-45deg, #091828, #0d2d50, #0f4060, #0b4a38, #093320, #0d2d50, #091828);
+  background-size: 400% 400%;
+  animation: morphGradient 22s ease -6s infinite;
   color: rgba(255,255,255,.75);
   border-radius: 10px;
   padding: 1.75rem 2rem;
@@ -411,7 +444,9 @@ li { margin-bottom: .4rem; }
    WHY CHOOSE US / DARK BAND
    ============================================= */
 .why-band {
-  background: var(--navy-dark);
+  background: linear-gradient(-45deg, #091828, #0d2d50, #0f4060, #0b4a38, #093320, #0d2d50, #091828);
+  background-size: 400% 400%;
+  animation: morphGradient 22s ease -10s infinite;
   color: var(--white);
 }
 
@@ -447,7 +482,9 @@ li { margin-bottom: .4rem; }
    CTA SECTION
    ============================================= */
 .cta-section {
-  background: linear-gradient(135deg, var(--blue) 0%, #0D4F82 100%);
+  background: linear-gradient(-45deg, #091828, #0d2d50, #0f4060, #0b4a38, #093320, #0d2d50, #091828);
+  background-size: 400% 400%;
+  animation: morphGradient 22s ease -10s infinite;
   text-align: center;
   padding: 80px 24px;
 }
@@ -459,7 +496,9 @@ li { margin-bottom: .4rem; }
    FOOTER
    ============================================= */
 .footer {
-  background: var(--navy-dark);
+  background: linear-gradient(-45deg, #091828, #0d2d50, #0f4060, #0b4a38, #093320, #0d2d50, #091828);
+  background-size: 400% 400%;
+  animation: morphGradient 22s ease -15s infinite;
   padding: 56px 0 32px;
   color: rgba(255,255,255,.55);
 }
@@ -507,7 +546,9 @@ li { margin-bottom: .4rem; }
    ABOUT PAGE
    ============================================= */
 .page-hero {
-  background: linear-gradient(140deg, #1e4976 0%, #142f52 35%, #0e2040 65%, #091828 100%);
+  background: linear-gradient(-45deg, #091828, #0d2d50, #0f4060, #0b4a38, #093320, #0d2d50, #091828);
+  background-size: 400% 400%;
+  animation: morphGradient 22s ease -4s infinite;
   padding: 120px 0 80px;
   position: relative;
   overflow: hidden;
@@ -693,7 +734,9 @@ li { margin-bottom: .4rem; }
 .blog-card:hover { box-shadow: 0 14px 36px rgba(0,0,0,.1); transform: translateY(-4px); }
 
 .blog-card-cat {
-  background: linear-gradient(135deg, #142f52 0%, #0e2040 100%);
+  background: linear-gradient(-45deg, #091828, #0d2d50, #0f4060, #0b4a38, #093320, #0d2d50, #091828);
+  background-size: 400% 400%;
+  animation: morphGradient 22s ease -2s infinite;
   padding: 1.75rem 2rem;
   font-size: .72rem;
   font-weight: 700;
@@ -739,7 +782,9 @@ li { margin-bottom: .4rem; }
    BLOG POST
    ============================================= */
 .post-hero {
-  background: linear-gradient(140deg, #1e4976 0%, #142f52 35%, #0e2040 65%, #091828 100%);
+  background: linear-gradient(-45deg, #091828, #0d2d50, #0f4060, #0b4a38, #093320, #0d2d50, #091828);
+  background-size: 400% 400%;
+  animation: morphGradient 22s ease -4s infinite;
   padding: 120px 0 64px;
   position: relative;
   overflow: hidden;
@@ -796,7 +841,9 @@ li { margin-bottom: .4rem; }
 }
 
 .post-cta-box {
-  background: var(--navy-dark);
+  background: linear-gradient(-45deg, #091828, #0d2d50, #0f4060, #0b4a38, #093320, #0d2d50, #091828);
+  background-size: 400% 400%;
+  animation: morphGradient 22s ease -10s infinite;
   border-radius: 12px;
   padding: 2rem 2.25rem;
   margin-top: 3rem;

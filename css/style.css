@@ -1002,7 +1002,38 @@ li { margin-bottom: .4rem; }
   color: #2E7D32;
   font-weight: 500;
   text-align: center;
-  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Formspree shows [data-fs-success] after submit */
+[data-fs-success][style*="block"] { display: block !important; }
+
+/* Field-level error messages */
+.form-field-error {
+  display: block;
+  font-size: .8rem;
+  color: #C0392B;
+  margin-top: .3rem;
+  min-height: 1em;
+}
+
+/* Highlight invalid fields (set by Formspree via aria-invalid) */
+.form-group input[aria-invalid="true"],
+.form-group select[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+  border-color: #C0392B;
+  box-shadow: 0 0 0 3px rgba(192,57,43,.1);
+}
+
+/* Form-level error banner */
+.form-error-global:not(:empty) {
+  background: #FDEDEC;
+  border: 1px solid #F1948A;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  color: #922B21;
+  font-size: .9rem;
+  margin-bottom: 1.25rem;
 }
 
 /* =============================================

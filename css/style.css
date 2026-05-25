@@ -102,6 +102,7 @@ li { margin-bottom: .4rem; }
 }
 
 .section-title      { margin-bottom: .75rem; }
+.familiar-title     { font-size: 1.9rem; white-space: nowrap; }
 .section-subtitle   { color: var(--text-light); font-size: 1.1rem; max-width: 680px; }
 .section-header     { margin-bottom: 56px; }
 .section-header.center { display: flex; flex-direction: column; align-items: center; text-align: center; }
@@ -264,9 +265,9 @@ li { margin-bottom: .4rem; }
    HERO
    ============================================= */
 .hero {
-  background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1920&q=80');
+  background-image: url('../images/hero.jpg');
   background-size: cover;
-  background-position: center 25%;
+  background-position: center 20%;
   padding: 140px 0 110px;
   position: relative;
   overflow: hidden;
@@ -1048,6 +1049,8 @@ li { margin-bottom: .4rem; }
 
   .blog-card { padding: 1.5rem 1.5rem; }
   .blog-card-meta { margin-left: 0; }
+
+  .familiar-title     { font-size: clamp(1.4rem, 5vw, 1.7rem); white-space: normal; }
 
   .hero { padding: 120px 0 72px; }
   .hero-actions { flex-direction: column; }

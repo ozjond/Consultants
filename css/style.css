@@ -288,25 +288,8 @@ li { margin-bottom: .4rem; }
   overflow: hidden;
 }
 
-/* Dark navy overlay — keeps all text fully readable */
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(6, 16, 34, 0.70);
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Left-side gradient deepens contrast exactly where the headline sits */
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(100deg, rgba(6,16,34,.45) 0%, transparent 65%);
-  pointer-events: none;
-  z-index: 0;
-}
+/* No overlay — image shows through fully */
+.hero::before, .hero::after { display: none; }
 
 .hero .container { position: relative; z-index: 1; }
 

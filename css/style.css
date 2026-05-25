@@ -255,40 +255,32 @@ li { margin-bottom: .4rem; }
    HERO
    ============================================= */
 .hero {
-  background: linear-gradient(-45deg, #0d2d55, #1c5490, #2a7fc0, #1a7080, #0f4570, #1c5490, #0d2d55);
-  background-size: 400% 400%;
-  animation: morphGradient 20s ease -4s infinite;
+  background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center 25%;
   padding: 140px 0 110px;
   position: relative;
   overflow: hidden;
 }
 
+/* Dark navy overlay — keeps all text fully readable */
 .hero::before {
   content: '';
   position: absolute;
-  top: -110%; right: -70%;
-  width: 180%; height: 300%;
-  background: radial-gradient(ellipse at center,
-    transparent 30%,
-    rgba(100,195,255,.32) 40%,
-    rgba(55,155,220,.14) 52%,
-    transparent 62%);
-  animation: ringFloat1 48s ease-in-out infinite;
+  inset: 0;
+  background: rgba(6, 16, 34, 0.70);
   pointer-events: none;
+  z-index: 0;
 }
 
+/* Left-side gradient deepens contrast exactly where the headline sits */
 .hero::after {
   content: '';
   position: absolute;
-  bottom: -110%; left: -60%;
-  width: 160%; height: 270%;
-  background: radial-gradient(ellipse at center,
-    transparent 30%,
-    rgba(40,200,200,.26) 40%,
-    rgba(30,160,175,.11) 53%,
-    transparent 63%);
-  animation: ringFloat2 60s ease-in-out -15s infinite;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(6,16,34,.45) 0%, transparent 65%);
   pointer-events: none;
+  z-index: 0;
 }
 
 .hero .container { position: relative; z-index: 1; }

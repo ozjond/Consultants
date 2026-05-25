@@ -282,7 +282,7 @@ li { margin-bottom: .4rem; }
 .hero {
   background-image: url('../images/hero.jpg');
   background-size: cover;
-  background-position: center 20%;
+  background-position: center 35%;
   padding: 140px 0 110px;
   position: relative;
   overflow: hidden;
@@ -309,10 +309,11 @@ li { margin-bottom: .4rem; }
 }
 
 .hero-sub {
-  color: rgba(255,255,255,.7);
+  color: rgba(255,255,255,.95);
   font-size: 1.2rem;
   max-width: 620px;
   margin-bottom: .75rem;
+  text-shadow: 0 1px 12px rgba(0,0,0,.7), 0 0 40px rgba(0,0,0,.5);
 }
 
 .hero-support {

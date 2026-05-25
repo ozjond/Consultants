@@ -173,18 +173,33 @@ li { margin-bottom: .4rem; }
 .nav-logo {
   display: flex;
   align-items: center;
+  gap: .65rem;
   flex-shrink: 0;
+  text-decoration: none;
 }
 .nav-logo img {
-  height: 52px;
+  height: 42px;
   width: auto;
   display: block;
+  flex-shrink: 0;
+}
+.nav-logo-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -.01em;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
-/* Footer logo — slightly larger */
-.footer-brand .nav-logo img {
-  height: 72px;
-  width: auto;
+/* Footer logo — larger icon + text */
+.footer-brand .nav-logo { gap: .85rem; }
+.footer-brand .nav-logo img { height: 60px; }
+.footer-brand .nav-logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -.015em;
 }
 
 .nav-links {

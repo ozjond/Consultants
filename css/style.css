@@ -170,12 +170,21 @@ li { margin-bottom: .4rem; }
 }
 
 .nav-logo {
-  color: var(--white);
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: -.01em;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
-.nav-logo span { color: var(--blue-light); }
+.nav-logo img {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+/* Footer logo — slightly larger */
+.footer-brand .nav-logo img {
+  height: 72px;
+  width: auto;
+}
 
 .nav-links {
   display: flex;

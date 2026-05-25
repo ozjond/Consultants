@@ -280,16 +280,24 @@ li { margin-bottom: .4rem; }
    HERO
    ============================================= */
 .hero {
-  background-image: url('../images/hero.jpg');
+  background-image: url('../images/hero-v3.png');
   background-size: cover;
-  background-position: center 35%;
+  background-position: center center;
   padding: 140px 0 110px;
   position: relative;
   overflow: hidden;
 }
 
-/* No overlay — image shows through fully */
-.hero::before, .hero::after { display: none; }
+/* Subtle shade over hero image */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+  z-index: 0;
+}
+.hero::after { display: none; }
 
 .hero .container { position: relative; z-index: 1; }
 
@@ -298,7 +306,11 @@ li { margin-bottom: .4rem; }
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--blue-light);
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.32);
+  display: inline-block;
+  padding: .28rem .75rem;
+  border-radius: 4px;
   margin-bottom: 1rem;
 }
 
@@ -309,11 +321,10 @@ li { margin-bottom: .4rem; }
 }
 
 .hero-sub {
-  color: rgba(255,255,255,.95);
+  color: rgba(255,255,255,.9);
   font-size: 1.2rem;
   max-width: 620px;
   margin-bottom: .75rem;
-  text-shadow: 0 1px 12px rgba(0,0,0,.7), 0 0 40px rgba(0,0,0,.5);
 }
 
 .hero-support {
